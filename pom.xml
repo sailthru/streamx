@@ -61,7 +61,7 @@
         <joda.version>1.6.2</joda.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <confluent.maven.repo>http://packages.confluent.io/maven/</confluent.maven.repo>
-        <jackson.version>2.6.3</jackson.version>
+        <jackson.version>2.19.1</jackson.version>
     </properties>
 
     <repositories>
@@ -225,18 +225,18 @@
                     <compilerArguments>
                         <Xlint:all/>
                         <!-- bootstrap class path not set in conjunction with -source 1.7 -->
-                        <Xlint:-options/>
+                        &lt;Xlint:-options/&gt;
                         <!-- serializable class ... has no definition of serialVersionUID -->
-                        <Xlint:-serial/>
+                        &lt;Xlint:-serial/&gt;
                         <!-- bad path element ".../repository/org/apache/derby/derby/10.10.2.0/derbyLocale_*.jar": no such file or directory -->
-                        <Xlint:-path/>
+                        &lt;Xlint:-path/&gt;
                         <!--
                         WALFile.java:[333,16] [deprecation] sync() in Syncable has been deprecated
                         Apparently SuppressWarnings("deprecation") doesn't cover this on JDK 7
                         -->
-                        <Xlint:-deprecation/>
+                        &lt;Xlint:-deprecation/&gt;
                         <!-- Needed for DataWriter.java because @SuppressWarnings("unchecked") doesn't cover this on JDK 7 -->
-                        <Xlint:-unchecked/>
+                        &lt;Xlint:-unchecked/&gt;
                         <Werror/>
                     </compilerArguments>
                     <showWarnings>true</showWarnings>
